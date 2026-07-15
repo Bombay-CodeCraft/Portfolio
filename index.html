@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+
+  <script>
+    try {
+      if (localStorage.getItem('theme') === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    } catch (e) {}
+  </script>
+
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+
+  <meta
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    name="viewport"
+  />
+
+  <title>Miheer Godbole | Portfolio</title>
+
+  <meta property="og:title" content="Miheer Godbole | Portfolio" />
+
+  <meta property="og:locale" content="en_US" />
+
+  <link
+    rel="canonical"
+    href="https://bombay-codecraft.github.io/portfolio/"
+  />
+
+  <meta
+    property="og:url"
+    content="https://bombay-codecraft.github.io/portfolio/"
+  />
+
+  <meta
+    name="description"
+    content="Portfolio of Miheer Godbole — BCA student and full-stack developer building secure, real-time web applications, based in Mumbai, India."
+  />
+
+  <link rel="icon" type="image/png" href="./icon.png" />
+
+  <meta name="theme-color" content="#2dd4bf" />
+
+  <meta property="og:site_name" content="Miheer Godbole" />
+
+  <meta property="og:image" content="./social.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link
+    crossorigin="crossorigin"
+    href="https://fonts.gstatic.com"
+    rel="preconnect"
+  />
+
+
+  <link
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="preload"
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link
+    href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+
+  <link
+    href="./main.css"
+    media="screen"
+    rel="stylesheet"
+  />
+  
+</head>
+
+
+<body>
+
+<canvas id="netCanvas"></canvas>
+
+<div class="scanline"></div>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo">MG<span class="cursor">_</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">about</a>
+      <a href="#skills">skills</a>
+      <a href="#projects">projects</a>
+      <a href="#education">education</a>
+      <a href="#contact">contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Switch to amber theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="4.2"></circle>
+          <path d="M12 2.5v2.4M12 19.1v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"></path>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z"></path>
+        </svg>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="top">
+    <div class="terminal">
+      <div class="terminal-bar">
+        <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+        <span class="terminal-title">guest@mumbai:~</span>
+      </div>
+      <div class="terminal-body" id="terminalBody">
+        <p><span class="prompt">guest@mumbai:~$</span> <span id="typedCmd"></span><span class="cursor" id="typeCursor">_</span></p>
+        <div id="terminalOutput" class="terminal-output hidden">
+          <p class="out-name">MIHEER MAKARAND GODBOLE</p>
+          <p class="out-role">&gt; aspiring cybersecurity analyst / engineer</p>
+          <p class="out-role">&gt; full-stack developer &mdash; BCA sem II, TCET Mumbai</p>
+          <p class="out-role">&gt; based in Mumbai, India</p>
+          <div class="hero-links">
+            <a href="https://github.com/MiheerGodbole-28" target="_blank" rel="noopener">github.com/MiheerGodbole-28</a>
+            <a href="mailto:Miheer.godbole@outlook.com">Miheer.godbole@outlook.com</a>
+          </div>
+          <a href="#projects" class="btn-primary">view projects &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="section-inner">
+      <h2><span class="tag" aria-hidden="true">~/about</span><span class="sr-only">About</span></h2>
+      <div class="about-grid">
+        <p class="about-text">
+          A dedicated BCA student at Thakur College of Engineering &amp; Technology, Mumbai University,
+          with hands-on experience building full-stack web applications. Currently sharpening skills
+          in secure application development, network security, and threat analysis &mdash; with the goal
+          of growing into a cybersecurity analyst or engineer. Outside of code, runs a local cricket
+          tournament, shoots food photography, and tinkers with Android home-screen customization.
+        </p>
+        <div class="about-side">
+          <div class="about-photo">
+            <div class="about-photo-frame">
+              <img src="./profile.jpg" alt="Portrait of Miheer Godbole" loading="lazy" width="480" height="600" />
+              <div class="about-photo-tint" aria-hidden="true"></div>
+              <span class="frame-corner corner-tl" aria-hidden="true"></span>
+              <span class="frame-corner corner-br" aria-hidden="true"></span>
+            </div>
+            <p class="about-photo-label">operator.jpg</p>
+          </div>
+          <div class="about-facts">
+            <div class="fact"><span class="fact-label">location</span><span class="fact-value">Mumbai, India</span></div>
+            <div class="fact"><span class="fact-label">status</span><span class="fact-value">BCA Sem II, ongoing</span></div>
+            <div class="fact"><span class="fact-label">focus</span><span class="fact-value">Cybersecurity &amp; Networks</span></div>
+            <div class="fact"><span class="fact-label">languages</span><span class="fact-value">English, Marathi, Gujarati, Sanskrit</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="section-inner">
+      <h2><span class="tag" aria-hidden="true">~/skills</span><span class="sr-only">Skills</span></h2>
+      <div class="skills-graph-wrap">
+        <div
+          class="skills-graph"
+          id="skillsGraph"
+          role="group"
+          aria-label="Technical skills. Hover or tab through each node to read details."
+        ></div>
+        <p class="skills-detail" id="skillsDetail" aria-live="polite">Hover or tab through the nodes to explore each skill.</p>
+      </div>
+      <noscript>
+        <div class="skills-grid">
+          <div class="skill-chip">HTML / CSS / JavaScript</div>
+          <div class="skill-chip">Node.js / Express.js</div>
+          <div class="skill-chip">Supabase (BaaS)</div>
+          <div class="skill-chip">Python / ReportLab</div>
+          <div class="skill-chip">Socket.io (Real-time)</div>
+          <div class="skill-chip">Git / GitHub</div>
+          <div class="skill-chip">REST APIs</div>
+          <div class="skill-chip">Network Fundamentals</div>
+        </div>
+      </noscript>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="section-inner">
+      <h2><span class="tag" aria-hidden="true">~/projects</span><span class="sr-only">Projects</span></h2>
+      <div class="projects-grid">
+
+        <details class="project-card">
+          <summary class="project-summary">
+            <div class="project-head">
+              <h3>LexTrack</h3>
+              <span class="project-stack">Node.js &middot; Express &middot; Socket.io &middot; Supabase</span>
+            </div>
+            <span class="project-cmd">cat project.json <span class="chevron" aria-hidden="true">&gt;</span></span>
+          </summary>
+          <div class="project-reveal">
+            <pre class="json-block"><code>{
+  <span class="json-key">"description"</span>: <span class="json-str">"Full-stack legal case management SaaS with real-time updates, case/client management, and document storage."</span>,
+  <span class="json-key">"highlights"</span>: [
+    <span class="json-str">"Supabase RLS, JWT auth, file upload via Storage public URLs"</span>,
+    <span class="json-str">"Art Deco UI &mdash; Playfair Display + dark slate/gold palette"</span>
+  ]
+}</code></pre>
+          </div>
+        </details>
+
+        <details class="project-card">
+          <summary class="project-summary">
+            <div class="project-head">
+              <h3>VPL Cricket Scoring App</h3>
+              <span class="live-badge"><span class="live-dot" aria-hidden="true"></span>LIVE</span>
+              <span class="project-stack">HTML &middot; CSS &middot; JS &middot; Supabase Realtime</span>
+            </div>
+            <span class="project-cmd">cat project.json <span class="chevron" aria-hidden="true">&gt;</span></span>
+          </summary>
+          <div class="project-reveal">
+            <pre class="json-block"><code>{
+  <span class="json-key">"status"</span>: <span class="json-live">"live"</span>,
+  <span class="json-key">"description"</span>: <span class="json-str">"VrindaOne Premiere League &mdash; live ball-by-ball scoring platform for a local tournament."</span>,
+  <span class="json-key">"highlights"</span>: [
+    <span class="json-str">"ICC-compliant NRR calc, gender divisions, strike-rotation and no-ball logic"</span>,
+    <span class="json-str">"Kindle-compatible viewer (ES5) + Bluetooth ball speed tracker"</span>
+  ]
+}</code></pre>
+          </div>
+        </details>
+
+        <details class="project-card">
+          <summary class="project-summary">
+            <div class="project-head">
+              <h3>QuizArena</h3>
+              <span class="project-stack">HTML &middot; CSS &middot; JS &middot; Supabase Auth</span>
+            </div>
+            <span class="project-cmd">cat project.json <span class="chevron" aria-hidden="true">&gt;</span></span>
+          </summary>
+          <div class="project-reveal">
+            <pre class="json-block"><code>{
+  <span class="json-key">"description"</span>: <span class="json-str">"Online quiz platform built as a group web development project."</span>,
+  <span class="json-key">"highlights"</span>: [
+    <span class="json-str">"Led app.js integration: auth flows, quiz fetch, leaderboard aggregation"</span>
+  ]
+}</code></pre>
+          </div>
+        </details>
+
+        <details class="project-card">
+          <summary class="project-summary">
+            <div class="project-head">
+              <h3>Authentication System Demo</h3>
+              <span class="project-stack">Vanilla HTML &middot; CSS &middot; JS</span>
+            </div>
+            <span class="project-cmd">cat project.json <span class="chevron" aria-hidden="true">&gt;</span></span>
+          </summary>
+          <div class="project-reveal">
+            <pre class="json-block"><code>{
+  <span class="json-key">"description"</span>: <span class="json-str">"BCA JavaScript concepts showcase in a dark-themed UI."</span>,
+  <span class="json-key">"highlights"</span>: [
+    <span class="json-str">"OOP (classes + inheritance), Map/Set, async/await, Promise.all"</span>,
+    <span class="json-str">"Animated blobs, password-strength meter, audit trail dashboard"</span>
+  ]
+}</code></pre>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="education">
+    <div class="section-inner">
+      <h2><span class="tag" aria-hidden="true">~/education</span><span class="sr-only">Education</span></h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-year">2025 &ndash; 2028</span>
+          <div>
+            <h4>Bachelor of Computer Applications (BCA)</h4>
+            <p>Thakur College of Engineering &amp; Technology, Mumbai University &mdash; <em>ongoing</em></p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2025</span>
+          <div>
+            <h4>Higher Secondary Certificate (HSC)</h4>
+            <p>Sathaye College Autonomous, Mumbai &mdash; 55.17%</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2023</span>
+          <div>
+            <h4>Secondary School Certificate (SSC)</h4>
+            <p>Shree Mumbadevi Vidya Niketan, Mumbai &mdash; 88.20%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="section-inner">
+      <h2><span class="tag" aria-hidden="true">~/contact</span><span class="sr-only">Contact</span></h2>
+      <div class="contact-box">
+        <p>Open to internship and entry-level opportunities in web development or cybersecurity.</p>
+        <div class="contact-links">
+          <a href="mailto:Miheer.godbole@outlook.com" class="btn-primary">email me &rarr;</a>
+          <a href="https://github.com/MiheerGodbole-28" target="_blank" rel="noopener" class="btn-ghost">github &rarr;</a>
+          <span class="phone">+91 70219 56026</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>&copy; 2026 Miheer Makarand Godbole &mdash; built from scratch, no framework.</p>
+</footer>
+
+
+    <script src="./main.js"></script>
+
+    
+  </body>
+</html>
