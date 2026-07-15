@@ -631,6 +631,25 @@ h2{
   animation: live-pulse 1.6s ease-in-out infinite;
 }
 
+.project-link{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 0.5px solid transparent;
+  transition: border-color 0.18s, color 0.18s;
+}
+.project-link:hover,
+.project-link:focus-visible{
+  color: var(--accent-2);
+  border-bottom-color: var(--accent-2);
+}
+.project-link i{ font-size: 13px; }
+
 /* education timeline */
 .timeline{
   display: flex;
